@@ -10,35 +10,73 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+// loop languages array to create a list
+function generateLanguages(data) {
+  let langArr = data.languages;
+  console.log(langArr);
+
+  for (var l of langArr) {
+    return `
+      ${l}
+    `
+  }
+}; 
+
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  
   return `
   
   # ${data.title}
 
+  ## Table of Contents
+  - Purpose
+  - Description
+    - User Story
+  - Technical Details
+    - Installation
+    - Useage
+    - License
+    - Contributing
+    - Tests
+  - Questions
+
   ## Purpose
   ${data.purpose}
 
-  ### Project Description
+  ## Description
   ${data.description}
 
   ### User Story
   ${data.userStory}
 
   ## Technical Details
-  ### Installation Instructions
+  ### Built With:
+  - ${data.languages.join(', ')}
+  OR
+  ${generateLanguages(data)}
+
+
+  ### Installation
   ${data.instructions}
 
-  ### Useage Information
+  ### Useage
   ${data.useage}
 
-  ### Contribution Guidelines
+  ### License
+
+  ### Contributing
   ${data.contributions}
 
-  ### Testing Instructions
+  ### Tests
   ${data.test}
 
+  ## Questions
+  ${data.questions}
+
   Created by ${data.github} / [(GitHub Profile)](https://github.com/${data.github})
+  For additional questions or collaboration, please reach out at ${data.email}.
 
 `;
 }

@@ -3,22 +3,63 @@ const questionsArr = [
     {
         name: 'title',
         message: 'What is your project title? (Required)',
-        type: 'input'
+        type: 'input',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please enter a project title')
+                return false;
+            }
+        }
     },
     {
         name: 'purpose',
-        message: 'Please write your project purpose.',
-        type: 'input'
+        message: 'What is the purpose of this project? (Required)',
+        type: 'input',
+        validate: purposeInput => {
+            if (purposeInput) {
+                return true;
+            } else {
+                console.log('Please enter a project purpose')
+                return false;
+            }
+        }
+
     },
     {
         name: 'description',
-        message: 'Please enter a project description:',
-        type: 'input'
+        message: 'Please enter a project description: (Required)',
+        type: 'input',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please enter a description')
+                return false;
+            }
+        }
+
     },
     {
         name: 'userStory',
-        message: 'Enter a User Story',
+        message: 'Enter a User Story: (Required)',
         type: 'input',
+        validate: storyInput => {
+            if (storyInput) {
+                return true;
+            } else {
+                console.log('Please enter a user story')
+                return false;
+            }
+        }
+
+    },
+    {
+        type: 'checkbox',
+        name: 'languages',
+        message: 'What did you build this project with? (Check all that apply)',
+        choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
     },
     {
         name: 'instructions',
@@ -42,8 +83,17 @@ const questionsArr = [
     },
     {
         name: 'github',
-        message: 'Enter your GitHub username:',
-        type: 'input'
+        message: 'Enter your GitHub username: (Required)',
+        type: 'input',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter a project title')
+                return false;
+            }
+        }
+
     }
 ];
 
