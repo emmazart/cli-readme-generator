@@ -72,6 +72,13 @@ const questionsArr = [
         type: 'input'
     },
     {
+        name: 'license',
+        message: 'Please select a license.',
+        type: 'rawlist',
+        choices: ['None', 'MIT', 'Apache', 'GPL'],
+        default: 0
+    },
+    {
         name: 'contributions',
         message: 'What are the contribution guidelines?',
         type: 'input'
@@ -90,6 +97,20 @@ const questionsArr = [
                 return true;
             } else {
                 console.log('Please enter a project title')
+                return false;
+            }
+        }
+
+    },
+    {
+        name: 'email',
+        message: 'Enter an email address to be contacted at for questions: (Required)',
+        type: 'input',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter an email address')
                 return false;
             }
         }
