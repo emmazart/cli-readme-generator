@@ -1,30 +1,26 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  // if (license === 'None') { return `No License Selected`}
-  if (license === 'MIT') { return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)` }
-  else if (license === 'Apache') { return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)` }
-  else if (license === 'GPL') { return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)` }
-  else { return '' }
+  if (license === 'None') { return ''; }
+
+  return `![License](https://img.shields.io/badge/license-${license}-yellow.svg)`;
 };
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  // if (license === 'None') { return `No License Selected`}
-  if (license === 'MIT') { return `[Link to MIT](https://opensource.org/licenses/MIT)` }
-  else if (license === 'Apache') { return `[Link to Apache 2.0](https://opensource.org/licenses/Apache-2.0)` }
-  else if (license === 'GPL') { return `[Link to GPL v3](https://www.gnu.org/licenses/gpl-3.0)` }
-  else { return '' }
+  if (license === 'None') { return ''; }
+
+  return `[Link to ${license}](https://opensource.org/licenses/${license})`;
 };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (!license) {return ''}
+  if (license === 'None') {return ''}
 
   else {return `
-  Current License: ${license}
+  Current License: ${license}\n
   ${renderLicenseLink(license)}
   `;
 }};
@@ -33,18 +29,16 @@ function renderLicenseSection(license) {
 function generateLanguages(langArr) {
   console.log(langArr);
 
-  const mapLangArr = langArr.map((lang, i, langArr) => {
-    console.log(`- ${lang}\n`);
-    return `- ${lang}\n`;
-  });
+  // const mapLangArr = langArr.map((lang, i, langArr) => {
+  //   console.log(`- ${lang}\n`);
+  //   return `- ${lang}\n`;
+  // });
 
-  // maybe i need to destructure the existing array (langArr) and 
-  // create elements based on whether or not the variable is defined?
+  for (l of langArr) {
+    return `- ${l}\n`;
+  }
 
-  [a, b, c, d, e, f, g] = [langArr];
-  if (a) {  }
-
-  return 
+  // return mapLangArr;
 }; 
 
 
@@ -77,7 +71,7 @@ function generateMarkdown(data) {
 
   ## Technical Details
   ### Built With: ${data.languages.join(', ')}
-  ${generateLanguages(data.languages)}
+
 
   ### Installation
   ${data.instructions}

@@ -1,41 +1,39 @@
 
   
-  # README Generator  |   [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  # hi  |   ![License](https://img.shields.io/badge/license-Apache-yellow.svg)
 
   ## Table of Contents
   -[Purpose](#purpose)
 
   -[Description](#description)
 
-    -[User Story](#user-story)
-
   -[Technical Details](#technical-details)
 
-    -[Installation](#installation)
+  -[Installation](#installation)
 
-    -[Useage](#useage)
+  -[Useage](#useage)
 
-    -[License](#license)
+  -[License](#license)
 
-    -[Contributing](#contributing)
+  -[Contributing](#contributing)
 
-    -[Tests](#tests)
+  -[Tests](#tests)
 
   -[Questions](#questions)
 
 
   ## Purpose
-  It dynamically generates readme files
+  hi
 
   ## Description
-  It makes things easier
+  hi
 
   ### User Story
-  As a coder, I want to generate readme files for my projects, so that I can spend more time on other things
+  hi
 
   ## Technical Details
-  ### Built With: JavaScript, ES6, Node
-  undefined
+  ### Built With: ES6, jQuery
+
 
   ### Installation
   
@@ -45,8 +43,8 @@
 
   ### License
   
-  Current License: GPL
-  [Link to GPL v3](https://www.gnu.org/licenses/gpl-3.0)
+  Current License: Apache
+  [Link to MIT](https://opensource.org/licenses/Apache)
   
 
   ### Contributing
@@ -56,6 +54,6 @@
   
 
   ## Questions
-  Created by emmazart / [(GitHub Profile)](https://github.com/emmazart)
-  For additional questions or collaboration, please reach out at emma.olson794@gmail.com.
+  Created by j / [(GitHub Profile)](https://github.com/j)
+  For additional questions or collaboration, please reach out at j.
 
