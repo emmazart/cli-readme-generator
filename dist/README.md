@@ -4,12 +4,12 @@
 
   # Description 
 
-  The purpose of this project is to allow developers to dynamically generate a README.md file via their command line interface.
-  [Link to Deployed Application](google.com)
+  This is a Javascript application, which uses Node.js and inquirer prompts to ask for and receive user input regarding the project for the desired README file. The purpose of this project is to allow developers to dynamically generate a README.md file via their command line interface.
+  [Link to Deployed Application](https://github.com/emmazart/cli-readme-generator)
 
   ## User Story 
 
-  This is a Javascript application, which uses Node.js and inquirer prompts to ask for and receive user input regarding the project for the desired README file.
+  AS A developer I WANT to dynamically generate a README.md file for my project SO THAT I can spend less time formatting my README document.
 
   # Table of Contents
   <ol>
@@ -34,27 +34,25 @@
 
   ## Installation 
 
-  none
+  Clone the github repo to your local computer and run npm install to install necessary dependencies.
 
   ## Useage 
 
-  none
+  None
 
   ## License 
 
   
-  Application currently licensed under ![License](https://img.shields.io/badge/license-MIT-yellow.svg) 
-
-  More information on this license can be found at: [Link to MIT](https://opensource.org/licenses/MIT)
+  Application currently licensed under MIT. For more information on this license please [visit the MIT documentation](https://opensource.org/licenses/MIT)
   
 
   ## Contributing 
 
-  none
+  None
 
   ## Tests 
 
-  none
+  None
 
   # Questions 
 

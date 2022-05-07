@@ -24,5 +24,8 @@ Dependencies: Inquirer
 
 ## Deployed Application
 
+[Link to Command Line Demo Video on Google Drive](https://drive.google.com/file/d/1CZ65YnFTMAYMUnWulxf_nuKpfZvanBVQ/view)
+[Link to Secondary Video Demonstrating Matching README.md File Was Generated](https://drive.google.com/file/d/1zUuKWCJUVaZGZ9LhGqtJbTzCRZXhEoyA/view)
+
 
 
