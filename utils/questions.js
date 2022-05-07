@@ -13,20 +13,20 @@ const questionsArr = [
             }
         }
     },
-    {
-        name: 'purpose',
-        message: 'What is the purpose of this project? (Required)',
-        type: 'input',
-        validate: purposeInput => {
-            if (purposeInput) {
-                return true;
-            } else {
-                console.log('Please enter a project purpose')
-                return false;
-            }
-        }
+    // {
+    //     name: 'purpose',
+    //     message: 'What is the purpose of this project? (Required)',
+    //     type: 'input',
+    //     validate: purposeInput => {
+    //         if (purposeInput) {
+    //             return true;
+    //         } else {
+    //             console.log('Please enter a project purpose')
+    //             return false;
+    //         }
+    //     }
 
-    },
+    // },
     {
         name: 'description',
         message: 'Please enter a project description: (Required)',
@@ -115,6 +115,24 @@ const questionsArr = [
             }
         }
 
+    },
+    {
+        name: 'confirmLink',
+        message: 'Would you like to include a link to your deployed application?',
+        type: 'confirm',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'deployed',
+        message: 'Please enter the link to your deployed application.',
+        when:  ({ confirmLink }) => {
+            if (confirmLink) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ];
 

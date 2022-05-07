@@ -20,24 +20,36 @@ function renderLicenseSection(license) {
   if (license === 'None') {return ''}
 
   else {return `
-  Application current licensed under ${renderLicenseBadge(license)} \n
+  Application currently licensed under ${renderLicenseBadge(license)} \n
   More information on this license can be found at: ${renderLicenseLink(license)}
   `;
 }};
 
+function renderDeployedLink(link) {
+  if(!link) {
+    return '';
+  }
+
+  return `[Link to Deployed Application](${link})`;
+}
+
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = function(data) {
-  const space = '*Tabspace*';
-
   return `
   
   # ${data.title}  |   ${renderLicenseBadge(data.license)}
+
+  # Description \n
+  ${data.description}
+  ${renderDeployedLink(data.deployed)}
+
+  ## User Story \n
+  ${data.userStory}
 
   # Table of Contents
   <ol>
     <li><a href=#description>Description</a></li>
     <ol>
-      <li><a href=#purpose>Purpose</a></li>
       <li><a href=#user-story>User Story</a></li>
     </ol>
     <li><a href=#technical-details>Technical Details</a></li>
@@ -50,15 +62,6 @@ const generateMarkdown = function(data) {
     <li><a href=#tests>Tests</a></li>
     <li><a href=#questions>Questions</a></li>
   </ol>
-
-  # Description \n
-  ${data.description}
-
-  ## Purpose \n
-  ${data.purpose}
-
-  ## User Story \n
-  ${data.userStory}
 
   # Technical Details \n
   ## Built With: ${data.languages.join(', ')}
