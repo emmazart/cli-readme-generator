@@ -20,11 +20,14 @@ SO THAT I can quickly create a professional README for a new project
 - Javascript
 - Node.js 
 
-Dependencies: Inquirer 
+Dependencies: Inquirer package
 
 ## Deployed Application
 
+The README.md file generated in the demo videos can be viewed [here in the dist folder](./dist/README.md)
+
 [Link to Command Line Demo Video on Google Drive](https://drive.google.com/file/d/1CZ65YnFTMAYMUnWulxf_nuKpfZvanBVQ/view)
+
 [Link to Secondary Video Demonstrating Matching README.md File Was Generated](https://drive.google.com/file/d/1zUuKWCJUVaZGZ9LhGqtJbTzCRZXhEoyA/view)
 
 
