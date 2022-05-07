@@ -1,60 +1,63 @@
 
   
-  # d  |   
+  # README Generator  |   ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
   # Table of Contents
   <ol>
   <li><a href=#purpose>Purpose</a></li>
-  <li>Description<a href=#description></a></li>
-  <ol>Technical Details<a href=#technical-details></a></li>
-    <li>Installation<a href=#installation></a></li>
-    <li>Useage<a href=#usage></a></li>
-    <li>License<a href=#license></a></li>
+  <li><a href=#description>Description</a></li>
+  <ol><a href=#technical-details>Technical Details</a></li>
+    <li><a href=#installation>Installation</a></li>
+    <li><a href=#usage>Useage</a></li>
   </ol>
-  <li>Contributing<a href=#contributing></a></li>
-  <li>Tests<a href=#tests></a></li>
-  <li>Questions<a href=#questions></a></li>
+  <li><a href=#contributing>Contributing</a></li>
+  <li><a href=#tests>Tests</a></li>
+  <li><a href=#questions>Questions</a></li>
   </ol>
-
-
 
   # Purpose 
 
-  d
+  The purpose of this project is to allow developers to dynamically generate a README.md file via their command line interface. 
 
   # Description 
 
-  d
+  This is a Javascript application, which uses Node.js and inquirer prompts to ask for and receive user input regarding the project for the desired README file. 
 
   ## User Story 
 
-  d
+  AS A developer I WANT to dynamically generate a README.md file for my project SO THAT I can spend less time formatting my README document.
 
   # Technical Details 
 
-  ## Built With: JavaScript 
-
+  ## Built With: JavaScript, ES6, Node
 
   ## Installation 
 
-  
+  None
 
   ## Useage 
 
+  None
+
   
 
+  ## License 
+
+  Current License: MIT
+
+  [Link to MIT](https://opensource.org/licenses/MIT)
   
 
   ## Contributing 
 
-  
+  None
 
   ## Tests 
 
-  d
+  None
 
   # Questions 
 
-  Created by d / [(GitHub Profile)](https://github.com/d)
-  For additional questions or collaboration, please reach out at d.
+  Created by emmazart / [(GitHub Profile)](https://github.com/emmazart)
+  For additional questions or collaboration, please reach out at emma.olson794@gmail.com.
 

@@ -1,5 +1,3 @@
-var toc = require('markdown-toc');
-
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -22,13 +20,10 @@ function renderLicenseSection(license) {
   if (license === 'None') {return ''}
 
   else {return `
-
-  ## License \n
-  Current License: ${license}\n
-  ${renderLicenseLink(license)}
+  Application current licensed under ${renderLicenseBadge(license)} \n
+  More information on this license can be found at: ${renderLicenseLink(license)}
   `;
 }};
-
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = function(data) {
@@ -40,22 +35,27 @@ const generateMarkdown = function(data) {
 
   # Table of Contents
   <ol>
-  <li><a href=#purpose>Purpose</a></li>
-  <li><a href=#description>Description</a></li>
-  <ol><a href=#technical-details>Technical Details</a></li>
-    <li><a href=#installation>Installation</a></li>
-    <li><a href=#usage>Useage</a></li>
+    <li><a href=#description>Description</a></li>
+    <ol>
+      <li><a href=#purpose>Purpose</a></li>
+      <li><a href=#user-story>User Story</a></li>
+    </ol>
+    <li><a href=#technical-details>Technical Details</a></li>
+    <ol>
+      <li><a href=#installation>Installation</a></li>
+      <li><a href=#usage>Useage</a></li>
+      <li><a href=#license>License</a></li>
+    </ol>
+    <li><a href=#contributing>Contributing</a></li>
+    <li><a href=#tests>Tests</a></li>
+    <li><a href=#questions>Questions</a></li>
   </ol>
-  <li><a href=#contributing>Contributing</a></li>
-  <li><a href=#tests>Tests</a></li>
-  <li><a href=#questions>Questions</a></li>
-  </ol>
-
-  # Purpose \n
-  ${data.purpose}
 
   # Description \n
   ${data.description}
+
+  ## Purpose \n
+  ${data.purpose}
 
   ## User Story \n
   ${data.userStory}
@@ -69,6 +69,7 @@ const generateMarkdown = function(data) {
   ## Useage \n
   ${data.useage}
 
+  ## License \n
   ${renderLicenseSection(data.license)}
 
   ## Contributing \n
@@ -79,7 +80,7 @@ const generateMarkdown = function(data) {
 
   # Questions \n
   Created by ${data.github} / [(GitHub Profile)](https://github.com/${data.github})
-  For additional questions or collaboration, please reach out at ${data.email}.
+  For additional questions or collaborations, please reach out at ${data.email}.
 
 `;
 };
@@ -88,6 +89,7 @@ module.exports = generateMarkdown;
 
 
 
+// var toc = require('markdown-toc');
 
 // const generateMarkdown = data => {
 //   return new Promise((resolve, reject) => {
