@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license === 'None') { return ''; }
 
-  return `[Link to ${license}](https://opensource.org/licenses/${license})`;
+  return `[visit the ${license} documentation](https://opensource.org/licenses/${license})`;
 };
 
 // TODO: Create a function that returns the license section of README
@@ -20,18 +20,18 @@ function renderLicenseSection(license) {
   if (license === 'None') {return ''}
 
   else {return `
-  Application currently licensed under ${renderLicenseBadge(license)} \n
-  More information on this license can be found at: ${renderLicenseLink(license)}
+  Application currently licensed under ${license}. For more information on this license please ${renderLicenseLink(license)}
   `;
 }};
 
+// function that returns optional deployment link
 function renderDeployedLink(link) {
   if(!link) {
     return '';
   }
 
   return `[Link to Deployed Application](${link})`;
-}
+};
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = function(data) {
