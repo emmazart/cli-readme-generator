@@ -1,26 +1,26 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Create a function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
+  // If there is no license, return an empty string
   if (license === 'None') { return ''; }
 
   return `![License](https://img.shields.io/badge/license-${license}-yellow.svg)`;
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Create a function that returns the license link
 function renderLicenseLink(license) {
+  // If there is no license, return an empty string
   if (license === 'None') { return ''; }
 
   return `[visit the ${license} documentation](https://opensource.org/licenses/${license})`;
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Create a function that returns the license section of README
 function renderLicenseSection(license) {
+  // If there is no license, return an empty string
   if (license === 'None') {return ''}
 
   else {return `
-  Application currently licensed under ${license}. For more information on this license please ${renderLicenseLink(license)}
+  Application currently licensed under ${license}. For more information on this license please ${renderLicenseLink(license)}.
   `;
 }};
 
@@ -35,6 +35,41 @@ function renderDeployedLink(link) {
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = function(data) {
+
+  // dynamically create table of contents with optional sections
+  let tableOfContents = `
+  <ol>
+    <li><a href=#description>Description</a></li>
+    <ol>
+      <li><a href=#user-story>User Story</a></li>
+    </ol>
+    <li><a href=#technical-details>Technical Details</a></li>
+    <ol>
+      <li><a href=#license>License</a></li>`
+
+      if (data.instructions) {
+        tableOfContents += `\n <li><a href=#installation>Installation</a></li>`
+      };
+
+      if (data.useage) {
+        tableOfContents += `\n <li><a href=#usage>Useage</a></li>`
+      };
+
+    tableOfContents += `\n </ol>`
+
+    if (data.contributions) {
+      tableOfContents += `\n     <li><a href=#contributing>Contributing</a></li>`
+    }
+
+    if (data.useage) {
+      tableOfContents += `\n     <li><a href=#tests>Tests</a></li>`
+    }
+    
+    tableOfContents += `<li><a href=#questions>Questions</a></li>
+  </ol>
+  `;
+
+  // main generate markdown 
   return `
   
   # ${data.title}  |   ${renderLicenseBadge(data.license)}
@@ -47,21 +82,7 @@ const generateMarkdown = function(data) {
   ${data.userStory}
 
   # Table of Contents
-  <ol>
-    <li><a href=#description>Description</a></li>
-    <ol>
-      <li><a href=#user-story>User Story</a></li>
-    </ol>
-    <li><a href=#technical-details>Technical Details</a></li>
-    <ol>
-      <li><a href=#installation>Installation</a></li>
-      <li><a href=#usage>Useage</a></li>
-      <li><a href=#license>License</a></li>
-    </ol>
-    <li><a href=#contributing>Contributing</a></li>
-    <li><a href=#tests>Tests</a></li>
-    <li><a href=#questions>Questions</a></li>
-  </ol>
+  ${tableOfContents}
 
   # Technical Details \n
   ## Built With: ${data.languages.join(', ')}
