@@ -47,6 +47,7 @@ const generateMarkdown = function(data) {
     <ol>
       <li><a href=#license>License</a></li>`
 
+      // check to see if information exists in optional sections
       if (data.instructions) {
         tableOfContents += `\n <li><a href=#installation>Installation</a></li>`
       };
@@ -85,7 +86,7 @@ const generateMarkdown = function(data) {
   ${tableOfContents}
 
   # Technical Details \n
-  ## Built With: ${data.languages.join(', ')}
+  ### Built With: ${data.languages.join(', ')}
 
   ## Installation \n
   ${data.instructions}
