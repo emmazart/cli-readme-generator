@@ -20,6 +20,9 @@ This is a command line application. There is no live deployment & users must fol
 
 The user-generated README.md file will be written to the ./dist/README.md.
 
+Demonstration of the Repository File Structure in VS Code:
+![Screenshot of Repo File Structure](./assets/images/file-structure.png)
+
 ### Installation
 To utilize this application, clone the repo to your local computer and run an npm install to install all necessary dependencies. To invoke the application, navigate to the root in your command line and run node index.
 
