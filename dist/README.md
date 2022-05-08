@@ -49,7 +49,7 @@
 
   ## Contributing 
 
-  Noen
+  None
 
   ## Tests 
 
