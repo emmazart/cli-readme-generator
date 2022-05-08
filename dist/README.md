@@ -1,15 +1,15 @@
 
   
-  # h  |   ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+  # README Generator  |   ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
   # Description 
 
-  j
-  
+  This is a Javascript application, which uses Node.js and inquirer prompts to ask for and receive user input regarding the project for the desired README file. The purpose of this project is to allow developers to dynamically generate a README.md file via their command line interface.
+  [Link to Deployed Application](https://github.com/emmazart/cli-readme-generator)
 
   ## User Story 
 
-  j
+  AS A developer I WANT to dynamically generate a README.md file for my project SO THAT I can spend less time formatting my README document.
 
   # Table of Contents
   
@@ -31,32 +31,32 @@
 
   # Technical Details 
 
-  ## Built With: HTML, CSS, ES6
+  ### Built With: JavaScript, ES6, Node
 
   ## Installation 
 
-  f
+  Clone the github repo to your local computer and run npm install to install necessary dependencies.
 
   ## Useage 
 
-  f
+  None
 
   ## License 
 
   
-  Application currently licensed under MIT. For more information on this license please [visit the MIT documentation](https://opensource.org/licenses/MIT)
+  Application currently licensed under MIT. For more information on this license please [visit the MIT documentation](https://opensource.org/licenses/MIT).
   
 
   ## Contributing 
 
-  f
+  Noen
 
   ## Tests 
 
-  f
+  None
 
   # Questions 
 
-  Created by f / [(GitHub Profile)](https://github.com/f)
-  For additional questions or collaborations, please reach out at f.
+  Created by emmazart / [(GitHub Profile)](https://github.com/emmazart)
+  For additional questions or collaborations, please reach out at emma.olson794@gmail.com.
 
